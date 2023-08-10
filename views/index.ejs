@@ -1,0 +1,48 @@
+<%- include('layout') %>
+
+<h1 class="text-3xl mb-4">Learning Material Management</h1>
+
+<div class="mb-8 p-4 border rounded bg-white">
+  <h2 class="text-xl mt-2 mb-2">Add Date Node</h2>
+  <form action="/add-date" method="POST">
+    <div class="flex items-center">
+      <label for="date" class="mr-2">Date (yyyy-mm-dd):</label>
+      <input type="text" id="date" name="date" required class="px-2 py-1 rounded border border-gray-300">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded ml-2">Add Date</button>
+    </div>
+  </form>
+</div>
+
+<div class="mb-8 p-4 border rounded bg-white">
+  <h2 class="text-xl mt-2 mb-2">Add Video Node</h2>
+  <form action="/add-video" method="POST">
+    <div class="mb-2">
+      <label for="videoDate" class="mr-2">Date (yyyy-mm-dd):</label>
+      <input type="text" id="videoDate" name="date" required class="px-2 py-1 rounded border border-gray-300">
+    </div>
+    <div class="mb-2">
+      <label for="videoId" class="mr-2">Video ID:</label>
+      <input type="text" id="videoId" name="videoId" required class="px-2 py-1 rounded border border-gray-300">
+    </div>
+    <div class="mb-2">
+      <label for="videoTitle" class="mr-2">Title:</label>
+      <input type="text" id="videoTitle" name="title" class="px-2 py-1 rounded border border-gray-300">
+    </div>
+    <div class="mb-2">
+      <label for="videoUrl" class="mr-2">URL:</label>
+      <input type="text" id="videoUrl" name="url" class="px-2 py-1 rounded border border-gray-300 w-full">
+    </div>
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Video</button>
+  </form>
+</div>
+
+<div class="p-4 border rounded bg-white">
+  <h2 class="text-xl mt-2 mb-2">List Videos for a Date</h2>
+  <form action="/list-videos" method="GET">
+    <div class="flex items-center">
+      <label for="inputDate" class="mr-2">Date (yyyy-mm-dd):</label>
+      <input type="text" id="inputDate" name="date" required class="px-2 py-1 rounded border border-gray-300">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded ml-2">List Videos</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<%- include('layout') %>
+
+<h1 class="text-3xl mb-4">Learning Material Management</h1>
+
+<h2 class="text-xl mt-4 mb-2">List Videos for a Date</h2>
+<form action="/list-videos" method="GET">
+  <label for="inputDate">Date (yyyy-mm-dd):</label>
+  <input type="text" id="inputDate" name="date" required>
+  <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">List Videos</button>
+</form>
+
+<% if (videos.length > 0) { %>
+  <h2 class="text-xl mt-4 mb-2">Videos for <%= inputDate %></h2>
+  <ul>
+    <% videos.forEach(video => { %>
+      <li><a href="<%= video.url %>" target="_blank"><%= video.title %></a></li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No videos found for <%= inputDate %>.</p>
+<% } %>

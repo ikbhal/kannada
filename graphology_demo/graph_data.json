@@ -1,0 +1,35 @@
+{
+  "options": {
+    "type": "directed",
+    "multi": false,
+    "allowSelfLoops": true
+  },
+  "attributes": {},
+  "nodes": [
+    {
+      "key": "A",
+      "attributes": {
+        "label": "Node A",
+        "category": "example"
+      }
+    },
+    {
+      "key": "B",
+      "attributes": {
+        "label": "Node B",
+        "category": "example"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "key": "AB",
+      "source": "A",
+      "target": "B",
+      "attributes": {
+        "label": "Knows",
+        "weight": 0.5
+      }
+    }
+  ]
+}
